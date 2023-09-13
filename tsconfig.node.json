@@ -3,7 +3,11 @@
       "composite": true,
       "module": "ESNext",
       "moduleResolution": "Node",
-      "allowSyntheticDefaultImports": true
+      "allowSyntheticDefaultImports": true,
+      "target": "ES6", // Set your target ECMAScript version here
+      "outDir": "./dist", // Specify your output directory
+      "rootDir": "./src" // Specify your source code directory
     },
-    "include": ["vite.config.ts"]
+    "include": ["src/**/*.ts"] // Include your TypeScript source files
   }
+  

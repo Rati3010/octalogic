@@ -1,9 +1,190 @@
-import React from 'react'
+import React from 'react';
+import Sidebar from "../components/Sidebar";
+import CourseListTable from '../components/CourseListTable';
+
+const Courses = [
+  {
+    id: 1,
+    Name: 'Bass Guitar Basics',
+    Description: 'Introduction to playing the bass guitar.',
+    Instructor: 'Michael Johnson',
+    Instrument: 'Guitar',
+    DayOfWeek: 'Thursday',
+    NumberOfStudents: 7,
+    Price: 55,
+    Status: 'Active',
+    Action: 'Enroll',
+  },
+  {
+    id: 2,
+    Name: 'Vocal Harmony Workshop',
+    Description: 'Learn how to sing in harmony with others.',
+    Instructor: 'Sarah Adams',
+    Instrument: 'Voice',
+    DayOfWeek: 'Monday',
+    NumberOfStudents: 8,
+    Price: 70,
+    Status: 'Active',
+    Action: 'Enroll',
+  },
+  {
+    id: 3,
+    Name: 'Keyboard for Kids',
+    Description: 'Keyboard lessons specially designed for kids.',
+    Instructor: 'Laura White',
+    Instrument: 'Keyboard',
+    DayOfWeek: 'Saturday',
+    NumberOfStudents: 15,
+    Price: 40,
+    Status: 'Active',
+    Action: 'Enroll',
+  },
+  {
+    id: 4,
+    Name: 'Advanced Drumming Techniques',
+    Description: 'Explore advanced drumming concepts and styles.',
+    Instructor: 'Alex Turner',
+    Instrument: 'Drums',
+    DayOfWeek: 'Wednesday',
+    NumberOfStudents: 10,
+    Price: 65,
+    Status: 'Archived',
+    Action: 'Enroll',
+  },
+  {
+    id: 5,
+    Name: 'Flute for Intermediates',
+    Description: 'Intermediate-level flute lessons.',
+    Instructor: 'Sophia Martinez',
+    Instrument: 'Flute',
+    DayOfWeek: 'Tuesday',
+    NumberOfStudents: 5,
+    Price: 50,
+    Status: 'Active',
+    Action: 'Enroll',
+  },
+  {
+    id: 6,
+    Name: 'Saxophone for Beginners',
+    Description: 'Learn the basics of playing the saxophone.',
+    Instructor: 'Daniel Carter',
+    Instrument: 'Saxophone',
+    DayOfWeek: 'Thursday',
+    NumberOfStudents: 8,
+    Price: 60,
+    Status: 'Active',
+    Action: 'Enroll',
+  },
+  {
+    id: 7,
+    Name: 'Songwriting Masterclass',
+    Description: 'Explore the art of creating your own music.',
+    Instructor: 'Olivia Williams',
+    Instrument: 'N/A',
+    DayOfWeek: 'Friday',
+    NumberOfStudents: 12,
+    Price: 80,
+    Status: 'Active',
+    Action: 'Enroll',
+  },
+  {
+    id: 8,
+    Name: 'Classical Guitar Workshop',
+    Description: 'Dive into the world of classical guitar music.',
+    Instructor: 'Lucas Rodriguez',
+    Instrument: 'Guitar',
+    DayOfWeek: 'Wednesday',
+    NumberOfStudents: 6,
+    Price: 70,
+    Status: 'Closed',
+    Action: 'Enroll',
+  },
+  {
+    id: 9,
+    Name: 'Electronic Music Production',
+    Description: 'Create electronic music using digital tools.',
+    Instructor: 'Mia Smith',
+    Instrument: 'N/A',
+    DayOfWeek: 'Monday',
+    NumberOfStudents: 10,
+    Price: 75,
+    Status: 'Closed',
+    Action: 'Enroll',
+  },
+  {
+    id: 10,
+    Name: 'Harp for Advanced Players',
+    Description: 'Advanced harp lessons for experienced players.',
+    Instructor: 'Eleanor Davis',
+    Instrument: 'Harp',
+    DayOfWeek: 'Tuesday',
+    NumberOfStudents: 4,
+    Price: 90,
+    Status: 'Archived',
+    Action: 'Enroll',
+  },
+  {
+    id: 11,
+    Name: 'Guitar Basics',
+    Description: 'Learn the fundamentals of playing the guitar.',
+    Instructor: 'John Smith',
+    Instrument: 'Guitar',
+    DayOfWeek: 'Monday',
+    NumberOfStudents: 10,
+    Price: 50,
+    Status: 'Active',
+    Action: 'Enroll',
+  },
+  {
+    id: 12,
+    Name: 'Piano Masterclass',
+    Description: 'An advanced course for piano enthusiasts.',
+    Instructor: 'Alice Johnson',
+    Instrument: 'Piano',
+    DayOfWeek: 'Wednesday',
+    NumberOfStudents: 8,
+    Price: 75,
+    Status: 'Active',
+    Action: 'Enroll',
+  },
+  {
+    id: 13,
+    Name: 'Drum Workshop',
+    Description: 'Get hands-on experience in drumming techniques.',
+    Instructor: 'Mark Davis',
+    Instrument: 'Drums',
+    DayOfWeek: 'Friday',
+    NumberOfStudents: 12,
+    Price: 60,
+    Status: 'Active',
+    Action: 'Enroll',
+  },
+  {
+    id: 14,
+    Name: 'Violin for Beginners',
+    Description: 'Perfect for those new to playing the violin.',
+    Instructor: 'Emily Brown',
+    Instrument: 'Violin',
+    DayOfWeek: 'Tuesday',
+    NumberOfStudents: 6,
+    Price: 45,
+    Status: 'Inactive',
+    Action: 'Learn More',
+  },
+];
 
 const CourseList = () => {
   return (
-    <div>CourseList</div>
-  )
-}
+    <div>
+      <Sidebar />
+      <div className="flex-1 float-right w-[93vw]">
+        <div className="px-7">
+          <h1 className="text-gray-500 mt-2 text-3xl font-normal">Courses</h1>
+          <CourseListTable courseData={Courses} />
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default CourseList
+export default CourseList;
